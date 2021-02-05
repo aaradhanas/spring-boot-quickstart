@@ -1,1 +1,1 @@
-# spring-boot-quickstart
+# Spring boot quickstart
