@@ -3,6 +3,8 @@ package com.springboot.demo.controller;
 import com.springboot.demo.config.Settings;
 import com.springboot.demo.model.Topic;
 import com.springboot.demo.service.TopicService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,8 @@ import java.util.List;
 @RestController
 public class TopicController {
 
+    private final Logger logger = LoggerFactory.getLogger(TopicController.class);
+
     @Autowired
     private TopicService topicService;
 
@@ -20,7 +24,7 @@ public class TopicController {
 
     @GetMapping("/topics")
     public List<Topic> getAllTopics() {
-        System.out.println("Setttings flag = "+ settings.isEnabled());
+        logger.info("Setttings flag = "+ settings.isEnabled());
         return topicService.getAllTopics();
     }
 
