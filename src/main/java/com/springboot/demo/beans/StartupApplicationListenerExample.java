@@ -16,6 +16,6 @@ public class StartupApplicationListenerExample implements ApplicationListener<Co
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         LOGGER.info("ContextRefreshedEvent = " + contextRefreshedEvent.getApplicationContext());
-        LOGGER.info("topicControllerBean = " + contextRefreshedEvent.getApplicationContext().getBean(TopicController.class).getAllTopics());
+        // LOGGER.info("topicControllerBean = " + contextRefreshedEvent.getApplicationContext().getBean(TopicController.class).getAllTopics());
     }
 }
